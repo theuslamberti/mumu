@@ -55,23 +55,23 @@ Durante o desenvolvimento, devem ser usadas duas branches no git: main, e uma br
 
 Para a entidade "Person" os seguintes métodos HTTP devem ser expostos através da API:
 
-- GET /
+- GET /  
   Deve retornar todos os usuários salvos na base.
-- GET /:email
+- GET /:email  
   Deve retornar todas as informações de um usuário específico, ou retornar um erro caso o usuário não exista.
-- POST /
+- POST /  
   Deve salvar um novo usuário na base. No corpo da requisição devem ser passados nome e email.
 
 Para a entidade "Task" os seguintes métodos HTTP devem ser expostos através da API:
 
-- GET /
+- GET /  
   Deve retornar todas as tasks salvas na base.
-- GET /:email
+- GET /:email  
   Deve retornar todas as tasks sendo feitas pelo usuário com o email fornecido.  
   (os métodos acima devem ter a opção de um filtro chamado "done" com valor booleano, que irá fazer as queries acima de acordo com o filtro)
-- POST /
+- POST /  
   Deve criar uma nova task na base. No corpo da requisição devem ser passados descrição, estimativa e o email do usuário vinculado à tarefa. Caso o usuário passado não exista na base, um erro deve ser retornado e a task não deve ser salva.
-- PATCH /:id/duration
+- PATCH /:id/duration  
   Deve alterar a duração da tarefa com o id fornecido (quanto tempo está levando para realizá-la). No corpo da requisição deve ser enviado um atributo de tempo que será somado à duração já existente na base.
 
 Em ordem:
@@ -80,4 +80,4 @@ Em ordem:
 - Verifique se já está instalado ou instale o git (provavelmente já estará instalado no Linux)
 - Clone o repositório https://github.com/herzog0/mumu
 - Crie uma branch chamada staging
-- Procure "initialize typescript project" e siga algum passo a passo para criar um novo projeto em typescript. Provavelmente você terá que instalar o NodeJS na sua máquina. Quando for instalar ele, ignore a versão que o tutorial indicar e instale a versão 14.x.x mais recente (o importante é o 14 no início do número de versão, pra gente tanto faz os números que vêm depois).
+- Procure "initialize typescript project" no google e siga algum passo a passo para criar um novo projeto em typescript. Provavelmente você terá que instalar o NodeJS na sua máquina. Quando for instalar ele, ignore a versão que o tutorial indicar e instale a versão 14.x.x mais recente (o importante é o 14 no início do número de versão, pra gente tanto faz os números que vêm depois).
